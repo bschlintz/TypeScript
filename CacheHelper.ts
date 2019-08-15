@@ -1,18 +1,20 @@
 /**
+ * Utilizes Web Storage API: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
+ * 
  * Example Usage: 
  * 
- * import CacheHelpler from '../path/to/CacheHelper';
- * ...
- * 
- * let data = CacheHelper.get(CacheHelper.GLOBAL_CACHE_KEY, 'NavigationItems');
- *
- * if (!data) {
- *   data = await fetchData();
- *   let expiresInTicks = 1000 * 60 * 15; // 15 minutes
- *   CacheHelper.set(CacheHelper.GLOBAL_CACHE_KEY, 'NavigationItems', data, expiresInTicks, 'session');
- * }
- *
- * renderMenu(data);
+ *    import CacheHelpler from '../path/to/CacheHelper';
+ *    ...
+ *    
+ *    let data = CacheHelper.get(CacheHelper.GLOBAL_CACHE_KEY, 'NavigationItems');
+ *   
+ *    if (!data) {
+ *      data = await fetchData();
+ *      let expiresInTicks = 1000 * 60 * 15; // 15 minutes
+ *      CacheHelper.set(CacheHelper.GLOBAL_CACHE_KEY, 'NavigationItems', data, expiresInTicks, 'session');
+ *    }
+ *   
+ *    renderMenu(data);
  */
 
 export const GLOBAL_CACHE_KEY = "MyAppGlobalCacheKey";
